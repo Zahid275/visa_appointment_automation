@@ -1,0 +1,29 @@
+{
+  "name": "automation_script",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "login": "playwright test tests/login.spec.ts --headed --project=\"Google Chrome\"",
+    "run:wallet": "playwright test tests/wallet-automation.spec.ts",
+    "save:session": "npx tsx tests/save-session.ts",
+    "run:cdp": "npx tsx tests/cdp-automation.ts",
+    "run:keepalive": "npx tsx tests/keep-alive.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
